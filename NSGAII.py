@@ -1,6 +1,6 @@
 import numpy as np
 
-class NSGAII(Optimization):
+class NSGAII:
     def __init__(self, it=100, popSize=100, rc=0.8, rm=0.05, silent=True):
         self.silent = silent
         self.it = it
@@ -11,7 +11,6 @@ class NSGAII(Optimization):
         self.bestObj = None
         self.NPS_solutions = []
         self.NPS_objs = []
-        super().__init__()
 
     def Dominates(self, objList1, objList2):
         objList1 = np.array(objList1)
